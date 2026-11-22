@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Good Things | Everyday Shop</title>
+	<style>
+		* { box-sizing: border-box; }
+		body { margin: 0; color: #23332d; background: #f7f8f3; font-family: Arial, sans-serif; }
+		header { display: flex; align-items: center; justify-content: space-between; padding: 20px max(6%, calc((100% - 1100px) / 2)); background: #fff; }
+		.brand { color: #245c45; font-size: 1.3rem; font-weight: 800; text-decoration: none; }
+		nav { display: flex; gap: 24px; }
+		nav a, .cart { color: #52635b; text-decoration: none; font-size: .92rem; }
+		.cart { color: #245c45; font-weight: 700; }
+		main { max-width: 1100px; margin: auto; padding: 56px 24px; }
+		.hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 40px; padding: 52px; border-radius: 22px; background: #e8efe7; }
+		.eyebrow { color: #64816f; font-size: .78rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+		h1 { margin: 14px 0; font-size: clamp(2.6rem, 6vw, 4.5rem); line-height: 1.02; letter-spacing: -.06em; }
+		.hero p { max-width: 420px; color: #5e6d64; line-height: 1.7; }
+		.button { display: inline-block; margin-top: 12px; padding: 14px 20px; border-radius: 8px; background: #245c45; color: white; font-weight: 700; text-decoration: none; }
+		.hero-art { display: grid; min-height: 280px; place-items: center; border-radius: 16px; background: linear-gradient(145deg, #d5e0d1, #a9c2ad); font-size: 7rem; }
+		.section-heading { display: flex; align-items: baseline; justify-content: space-between; margin: 52px 0 20px; }
+		h2 { margin: 0; font-size: 1.8rem; letter-spacing: -.04em; }
+		.section-heading a { color: #245c45; text-decoration: none; }
+		.products { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+		.product { overflow: hidden; border: 1px solid #e7e9e3; border-radius: 14px; background: white; }
+		.product-art { display: grid; min-height: 170px; place-items: center; background: #f0f2eb; font-size: 4rem; }
+		.product-info { padding: 16px; }
+		.product-info h3 { margin: 0 0 8px; font-size: 1rem; }
+		.product-info p { margin: 0; color: #718078; font-size: .9rem; }
+		footer { padding: 28px 16px; color: #78847c; text-align: center; font-size: .85rem; }
+		@media (max-width: 700px) {
+			header { padding: 18px 5%; }
+			nav { gap: 12px; }
+			nav a { font-size: .8rem; }
+			main { padding: 30px 16px; }
+			.hero { grid-template-columns: 1fr; padding: 30px 24px; }
+			.hero-art { min-height: 190px; }
+			.products { grid-template-columns: 1fr; }
+		}
+		@media (max-width: 420px) { nav a:nth-child(2) { display: none; } }
+	</style>
+</head>
+<body>
+	<header>
+		<a class="brand" href="#home">good things.</a>
+		<nav aria-label="Main navigation"><a href="#shop">Shop</a><a href="#about">Our story</a><a href="#contact">Contact</a></nav>
+		<a class="cart" href="#shop">Bag (0)</a>
+	</header>
+	<main id="home">
+		<section class="hero" aria-labelledby="hero-title">
+			<div>
+				<span class="eyebrow">Thoughtful finds for daily life</span>
+				<h1 id="hero-title">A little better, every day.</h1>
+				<p>Discover simple, well-made essentials that bring a bit more joy to your everyday routine.</p>
+				<a class="button" href="#shop">Explore the collection</a>
+			</div>
+			<div class="hero-art" role="img" aria-label="A leafy potted plant">🪴</div>
+		</section>
+		<section id="shop" aria-labelledby="shop-title">
+			<div class="section-heading"><h2 id="shop-title">Popular picks</h2><a href="#shop">View all →</a></div>
+			<div class="products">
+				<article class="product"><div class="product-art" role="img" aria-label="Ceramic mug">☕</div><div class="product-info"><h3>Morning Mug</h3><p>Hand-finished ceramic · $18</p></div></article>
+				<article class="product"><div class="product-art" role="img" aria-label="Canvas tote bag">👜</div><div class="product-info"><h3>Everyday Tote</h3><p>Recycled cotton · $24</p></div></article>
+				<article class="product"><div class="product-art" role="img" aria-label="Small green plant">🌱</div><div class="product-info"><h3>Little Green Friend</h3><p>Easy-care plant · $16</p></div></article>
+			</div>
+		</section>
+	</main>
+	<footer id="contact">Made for everyday living. © 2025 Good Things</footer>
+</body>
+</html>
